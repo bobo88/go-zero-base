@@ -1,0 +1,15 @@
+syntax = "v1"
+
+type Request {
+	Name string `json:"name"`
+}
+
+type Response {
+	Message string `json:"message"`
+}
+
+service hello-api {
+	@handler HelloHandler
+	get /hello (Request) returns (Response)
+}
+
