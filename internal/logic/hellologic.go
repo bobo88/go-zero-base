@@ -5,7 +5,6 @@ package logic
 
 import (
 	"context"
-	"fmt"
 
 	"gozero-demo/internal/svc"
 	"gozero-demo/internal/types"
@@ -28,13 +27,9 @@ func NewHelloLogic(ctx context.Context, svcCtx *svc.ServiceContext) *HelloLogic 
 }
 
 func (l *HelloLogic) Hello(req *types.Request) (resp *types.Response, err error) {
-	// // todo: add your logic here and delete this line
-
-	// return
-
-	fmt.Println("hello logic===================")
+	// todo: add your logic here and delete this line
 
 	return &types.Response{
-		Message: "Hello 1111",
+		Message: "Hello " + req.Name,
 	}, nil
 }

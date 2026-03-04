@@ -1,7 +1,7 @@
 syntax = "v1"
 
 type Request {
-	Name string `json:"name"`
+	Name string `form:"name"`
 }
 
 type Response {
