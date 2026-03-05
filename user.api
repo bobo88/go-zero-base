@@ -1,0 +1,28 @@
+syntax = "v1"
+
+type Request {
+	Name string `form:"name"`
+}
+
+type RequestAdd {
+	Name string `json:"name"`
+}
+
+type Response {
+	Message string `json:"message"`
+}
+
+service user-api {
+	@handler userHandler
+	get /user (Request) returns (Response)
+
+	@handler userAddHandler
+	post /user (RequestAdd) returns (Response)
+
+	@handler userUpdateHandler
+	put /user (Request) returns (Response)
+
+	@handler userDelHandler
+	delete /user (Request) returns (Response)
+}
+

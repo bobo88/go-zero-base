@@ -7,6 +7,10 @@ type Request struct {
 	Name string `form:"name"`
 }
 
+type RequestAdd struct {
+	Name string `json:"name"`
+}
+
 type Response struct {
 	Message string `json:"message"`
 }
