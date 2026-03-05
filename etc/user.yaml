@@ -1,4 +1,5 @@
-Name: user-api
+Name: user.rpc
+ListenOn: 0.0.0.0:9000
 Host: 0.0.0.0
 Port: 9000
 
@@ -15,3 +16,8 @@ Telemetry:
   Name: user-api
   Endpoint: http://localhost:14268/api/traces
   Sampler: 1.0
+
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  Key: user.rpc
